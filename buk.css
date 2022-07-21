@@ -1,0 +1,842 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+html{
+    scroll-behavior: smooth;
+
+
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto; /* центрируем*/
+    padding: 0 15px; /* каб не прилипал к стенкам планшета*/
+}
+body{
+    font-family: ' Roboto', serif;
+    font-weight: 400 ; /* толщина шрифта */
+    font-size: 14px;
+    line-height: 18px; /* высота шрифта*/
+    color: #5e5e5e;
+}
+.header_top {
+    background-color: #303030;
+}
+header {
+    font-family: 'Roboto', 'sans-serif';
+}
+.header_btn{
+    float: right;
+line-height: 36px;
+
+    color: #1b1b1b;
+    background-color: #ffc222;
+    padding: 5px 20px 4px 50px;
+    font-size: 16px;
+    position: relative;
+}
+.header_btn:before{
+  /*  content: "\f0b1"; */
+    content: "🗨️";
+    font-family: 'icomoon';
+    position: absolute;
+    left:22px;
+    color: #15120a;
+}
+.header_contacts:after{ /* нужно юзать это к родителю кали используем float с одним из элементов*/
+    content: "";
+    clear: both;
+    display: block;
+}
+.header_phone{
+padding-left: 20px;
+    padding-right: 30px;
+}
+.header_phone:before{
+   /* content: "\f095"; */
+    content: "";
+    font-family: 'icomoon';
+    position: absolute;
+    left:0;
+    color: #ffc222;
+}
+.header_email{
+padding-left: 24px;
+}
+.header_email:before{
+   /* content: "\f003"; */
+    content: "";
+    font-family: 'icomoon';
+    position: absolute;
+    left:0;
+    color: #ffc222;
+}
+.header_phone, .header_email{
+    color: #cbcacb;
+    letter-spacing: 0.25px;
+    line-height: 45px; /* выровняли относительно консультации черную полосу */
+    position: relative;
+}
+.header_content {
+ padding: 34px 0px 23px;
+}
+.menu li{
+    display: inline-block;
+}
+.header_content_inner {
+    display: flex;
+    justify-content: space-between;  /*?*/
+}
+.menu a{
+    color: #323232;
+    font-size: 16px;
+    line-height: 36px; /* высота строки */
+    border: 1px solid transparent;
+    padding: 0px 16px;
+    transition:  all 2s;
+}
+.menu a:hover{
+    border-color: #ffc222;
+
+}
+.menu li + li{
+    padding-left: 10px; /* менюшки а отступят друг от друга на 10px */
+
+}
+.slider{
+   background-image: url("https://avatars.mds.yandex.net/get-zen_doc/3937202/pub_5f87252a17c9884cd3f791ac_5f872610dc9ac8787cfda7b0/scale_1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+.slider_inner {
+    padding-top: 110px;
+}
+.slider_item {
+    text-align: center;
+padding-top: 110px;
+    max-width: 665px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: #fff;
+    height: 300px;
+    max-height: 350px ;
+
+
+}
+.slider_title {
+text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 36px;
+    color: #ffc222;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+position: relative;
+    top: -100px;
+    font-family: ' Roboto', serif;
+}
+.slider_text{
+    position: relative;
+    top: -100px;
+    font-size: 20px;
+ color: #ffc222;
+    margin-bottom: -50px;
+}
+.slider_button {
+font-size: 14px;
+    line-height: 24px;
+    color: red;
+    font-weight: 500;
+    font-family: ' Roboto', serif;
+    padding: 8px 30px 8px 24px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+display: inline-block;
+    transition: all 2s;
+}
+.slider_button:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+.default_btn{
+    max-width: 250px;
+    max-height: 75px;
+    font-size: 14px;
+    line-height: 24px;
+    color: red;
+    font-weight: 500;
+    font-family: ' Roboto', serif;
+    padding: 8px 30px 8px 24px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+    display: inline-block;
+    position: relative;
+}
+.default_btn:after{
+    font-family: 'icomoon';
+   /* content: "\f105"; */
+    content: "";
+    position: absolute;
+top: 50%;
+transform: translateY(-50%); /* подымаем ровно на 50 % фигурку по оу*/
+    left: 110px;
+}
+.services {
+   padding: 50px 0px 30px;
+}
+.services_top, .news_top{
+    display: flex;
+    justify-content: space-between;  /* растянули блок каб показать все услуги было на весь экран*/
+    margin-bottom: 60px;
+}
+.services_title_box, .form_title_box, .news_title_box{
+  max-width: 520px;
+    padding-left: 140px;
+    position: relative;
+}
+.services_title_box:before, .form_title_box:before, .news_title_box:before{
+    content: "" ; /* обязательно пишется к before*/
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #ffc222;
+    left:0;
+    top: 11px;
+}
+.services_title, .form_title, .news_title {
+    font-size: 24px;
+    font-weight: 500;
+    font-height: 24px;
+    color: #0c0c0c;
+    font-family: ' Roboto', serif;
+    margin-bottom: 10px;
+}
+.services_text, .form_text, .news_text{
+ letter-spacing: 0.1em;
+}
+.services_btn, .news_btn{
+    color: #0c0c0c;
+line-height: 24px;
+font-size: 24px;
+    letter-spacing: 0.25px;
+   /* padding: 5px 38px; */
+    /*border: 3px solid #1a1717; */
+
+}
+.services_item{
+    max-width: 360px;
+    text-align: center;
+    padding: 30px 0px 80px;
+    position: relative;
+    min-height: 300px;
+    min-width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+}
+.services_items{
+    display: inline-block;
+    justify-content: space-between;
+
+}
+.services_item-title{
+    color: #212020;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 24px 0px;
+}
+.services_item_text{
+letter-spacing: 0.1px;
+    padding: 0px 30px 30px;
+
+}
+.services_item_btn {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    left:0;
+}
+.services_item_btn .default_btn:after{
+    color: #fff;
+}
+.services_item_link {
+    color: #050505;
+  border-bottom: 1px solid #050505;
+
+}
+.about{
+    background-image: url("https://sun9-57.userapi.com/0t4r7dg6cxlfcFMmV2rAzVJ_-4DH6d1fj4eiSw/sqYkNuL3Scg.jpg");
+    filter: brightness(90%);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    padding: 25px 0px 45px;
+}
+.about_inner{
+    max-width: 545px; /* ширина текста*/
+    float: right;
+
+}
+.about_title{
+   padding: 10px 0px 25px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+}
+.about_text {
+    font-weight: 500;
+    font-family: ' Roboto', serif;
+    color: #fff;
+    margin-bottom: 100px;
+    letter-spacing: 1px;
+    line-height:24px ;
+    max-height: 100px;
+
+}
+.about_btn .default_btn:after {
+    color: #000;
+}
+.about_btn {
+    max-height: 35px;
+}
+.form{
+    padding-top: 30px;
+}
+.form_inner{
+    padding-bottom: 100px;
+    /*background-image: url("https://media.discordapp.net/attachments/772164370406965271/994196116084105236/IMG_8902.png?width=586&height=586"); */
+    background-image: url("https://media.discordapp.net/attachments/772164370406965271/997430036909019186/IMG_9074.jpg?width=391&height=587");
+    background-repeat: no-repeat;
+   background-position: bottom right;
+    min-height: 460px;
+
+}
+.form_box{
+    max-width: 848px;
+padding-top: 45px;
+}
+.form_box-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.form_box_left{
+    max-width: 260px;
+width: 100%;
+}
+.form_box_right{
+    max-width: 555px;
+    float: right;
+   padding-right: 100px;
+width: 100%;
+}
+.form_box_inner label, .form_box_inner input, .form_box_inner textarea, .form_box_inner section{
+    display: block;
+    width: 100%;
+}
+.form_box_inner label{
+    line-height: 36px;
+    color:#282828
+}
+@media only screen and (max-width: 1175px) {
+.form_inner{
+    background-image: none;
+}
+}
+.form_box_inner input{
+    margin-bottom: 8px;
+    outline: none; /* убрали линию */
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding: 0px 10px;
+}
+.form_box_inner select{
+    outline: none; /* убрали линию */
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding-left: 17px;
+}
+.form_box_inner textarea {
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    height: 208px;
+    margin-bottom: 40px;
+resize: none;
+}
+.form_box_inner button{
+    background-color: transparent;
+    color: #282828;
+    float: right;
+}
+.advantages {
+
+    position: relative;
+    top: 300px;
+    padding: 55px 0px 40px;
+  /*  background-image: url("https://media.discordapp.net/attachments/772164370406965271/997434657664675860/IMG_9075.jpg"); */
+    background-image: url("https://media.discordapp.net/attachments/772164370406965271/998897487303671808/IMG_9164.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 350px;
+    background-size: cover;
+}
+.advantages_inner {
+    position: relative;
+    top: -200px;
+    color: #fff;
+    display: flex; /*  позиция в строчку*/
+    flex-direction: row;
+text-align: center;
+    float: right;
+max-width: 1024px;
+    justify-content: space-between;
+}
+@media only screen and (max-width:450px) {
+    .advantages_text .advantages_title {
+        max-width: 300px;
+    }
+}
+.advantages_item{
+    max-width: 360px;
+    padding: 0px 20px;
+}
+.advantages_title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+    padding: 60px 0px 15px;
+    position: relative;
+}
+.advantages_text {
+    line-height: 24px;
+    color: #d3d2d2;
+
+    letter-spacing: 0.1px;
+}
+.advantages_title:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffc222;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* сместили к ценру квадраты относительно текста */
+    background-image: url("https://images.satu.kz/138373182_138373182.jpg?PIMAGE_ID=138373182");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media only screen and (max-width:740px) {
+   .advantages_inner{
+      max-height: 100px;
+   }
+   /* .advantages_title:before{
+        opacity: 0;
+
+    } */
+    .advantages_inner {
+      /*  margin-top: 105px; */
+    }
+}
+@media only screen and (max-width: 389px) {
+    .news_title_box:before {
+      opacity: 0;
+    }
+.news_title_box {
+    position: relative;
+    right: 150px;
+}
+.news_btn{
+    position: relative;
+    right: 140px;
+}
+}
+.news {
+    margin-top: 310px;
+    background-color: #f9f9f9;
+/*max-width: 1024px; */
+    width: 100%;
+}
+.news_inner{
+    display: flex;
+    justify-content: space-between;
+box-shadow: 0px 5px 15px 1px rgba(128, 127, 127, 0.13);
+}
+.news_slider {
+    padding: 60px 35px 45px 70px;
+    max-width: 555px;
+    width: 100%;
+background-color: #fff;
+    position: relative;
+}
+.news_slider:before{
+
+    content: "🢆";
+    color:#fff;
+    font-size: 16px;
+    width: 65px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #ffc222;
+}
+.news_blog{
+    max-width: 260px;
+   /* width: 100%; */
+  /*  position: absolute; */
+}
+.news_images{
+    position: relative;
+
+}
+.news_date{
+    position: relative;
+    background-color: #ffc222;
+    width: 50px;
+    height:55px ;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 700;
+    top: -195px;
+    left: 10px;
+}
+.news_blog_text{
+position: relative;
+    top: -40px;
+}
+.news_blog_title{
+    position: relative;
+    top: -60px;
+}
+.slider_btn {
+   padding-left: 100px;
+    padding-top: 30px;
+line-height: 24px;
+   /* font-weight: 700; */
+
+display: flex;
+}
+.slider_btn button{
+    background-color: #ffc222;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+}
+@media only screen and (max-width: 383px) {
+   .slider_btn button{
+      width: 50px;
+   }
+}
+.slider_btn button:hover{
+cursor: pointer;
+    color: #f80707;
+}
+.news_blog_title{
+    font-size: 16px;
+    font-weight:700;
+    font-family: Roboto;
+    letter-spacing: 0.5px;
+    color: #242424;
+
+}
+.news_blog_text{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Roboto;
+
+    color: #8b8888;
+    letter-spacing: 0.1px;
+text-decoration: none;
+}
+.news_slider_title {
+font-size: 18px;
+    line-height: 24px;
+    color: #242424;
+    font-weight: 500;
+    font-family: Roboto;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.news_slider_text {
+    margin-bottom: 15px;
+
+}
+.news_slider_author {
+letter-spacing: 0.1px;
+    color: #212020;
+
+}
+.adopt{
+  /*  position: absolute;
+    left: 800px; */
+}
+/*@media only screen and (max-width: 900px) {
+    .news_slider{
+       margin-top: 600px;
+    }
+    .adopt {
+        position: relative;
+        right: 300px;
+    }
+    .slider_btn button {
+        position: relative;
+        right: 100px;
+    }
+} */
+.footer_content {
+    background-color: #454242;
+    padding: 20px 0px 30px;
+}
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+}
+/*.footer_map iframe {
+    max-width: 630px;
+    width: 100%;
+height: 250px;
+} */
+.footer_map{
+    padding-top: 10px;
+   max-width: 630px;
+    width: 100%;
+}
+.footer_map iframe{
+  width: 100%;
+
+}
+.footer_inner .header_btn{ /*обратилися  к множеству кнопок класса  header_btn, но обратилися только к кнопке  блока footer_inner */
+    float: none;
+    display: inline-block;
+}
+/*@media only screen and (max-width: 502px) {
+   .footer_map {
+      font-size: 50%;
+   }
+} */
+.footer_title{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    color:#fff;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+
+}
+.footer_text{
+    color: #d3d2d2;
+    margin-bottom: 20px;
+
+
+}
+.footer_info {
+    max-width: 360px;
+    float: left;
+
+}
+.footer_list li{
+    margin_top: 10px;
+
+}
+.footer_list a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    color: #fff;
+}
+.footer_copy{
+    background-color: #0a0909;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 8px 0;
+    font-weight: 400;
+    color: #fff;
+}
+.header_btn_menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+
+}
+.icon_bars {
+    content: "jcnsuhsc";
+}
+@media (max-width: 700px) {
+    .header_btn {
+        float: none; /* перекинули кнопку с консультацией на строку вниз */
+    }
+    .header_contacts {
+        text-align: center;
+
+    }
+    .header_btn:before{
+display: none;
+    }
+    .header_btn_menu {
+        display: block;
+    }
+    .header_btn_menu button {
+       background-color: transparent;
+        border: none;
+padding-bottom: 60px;
+    }
+    .menu ul {
+        display: none;
+        position: absolute;
+        left:0;
+        right:0;
+        margin-top: 20px;
+        z-index: 50;
+    }
+    .menu li {
+        display: block;
+        text-align: center;
+
+    }
+    .menu a {
+        display: block;
+        background-color: #ffc222;
+        border-top:1px solid #fff;
+        border-bottom:1px solid #fff;
+    }
+    .menu li+li{
+        padding-left: 0;
+    }
+
+}
+@media (max-width: 1156px){
+    .services_items{
+        display: block;
+    }
+.services_item {
+    max-width: 80%;
+    min-height: 330px;
+    margin: 30px auto;
+
+}
+.news_inner{
+display: block;
+}
+.news_slider {
+    max-width: 100%;
+}
+.news_blog {
+   max-width: 100%;
+    display: block;
+    margin-bottom: 30px;
+}
+.news_blog:after{
+    content:"";
+    clear:both;
+    display: block;
+}
+.news_images{
+    float: left;
+    margin-right: 50px;
+}
+}
+@media (max-width: 400px){
+    .header_btn:before{
+display: block;
+    }
+    .advantages_item{
+        padding: 0;
+    }
+}
+@media (max-width: 375px){
+    .header_btn:before{
+        display: block;
+    }
+}
+@media (min-width: 700px){
+    .menu ul{
+        display: block; !important;
+    }
+}
+@media (max-width: 900px){
+    .services_top{
+        display: block;
+    }
+    .news_top{
+        display: block;
+    }
+    .services_title_box,.form_title_box{
+        padding-left: 0;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+    .services_title_box:before,
+    .form_title_box:before,
+    .news_title_box:before{
+        display: none;
+    }
+    .news_btn{
+        position: relative;
+        top: 30px;
+        margin-top: 10px;
+    }
+    .services_btn {
+     /*  text-align: center; */
+        float: right;
+       /* margin-bottom: 70px;
+        padding-bottom: 20px; */
+        position: relative;
+        bottom: 20px;
+    }
+    .advantages_item{
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .advantages {
+        min-height: 550px;
+    }
+    .advantages_inner{
+        display: block;
+    }
+}
+@media (max-width: 440px){
+    .advantages {
+        min-height: 600px;
+    }
+}
+@media (max-width: 389px){
+    .advantages {
+        min-height: 700px;
+    }
+}
+@media (max-width: 540px) {
+    .news_slider {
+        padding: 50px 15px 25px 25px; }
+        .news_images{
+            float:none;
+
+    }
+}
+@media (max-width: 378px) {
+    .news_btn{
+       padding-left: 150px;
+    }
+}
